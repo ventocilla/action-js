@@ -1,0 +1,19 @@
+name: "Inclue comentários"
+description: "Essa action inclue comentários em issue ou PRs"
+author: "Leonardo Ventocilla"
+inputs:
+  GITHUB_TOKEN:
+    description: "Token de acesso ao GitHub"
+    required: true
+  issue-id:
+    description: "ID da issue ou PR"
+    required: true
+  comment:
+    description: "Comentário a ser incluído"
+    required: true
+outputs:
+  comment-id:
+    description: "ID do comentário incluído"
+runs:
+  using: "node20"
+  main: "dist/index.js"
